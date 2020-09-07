@@ -8,16 +8,16 @@
             <h1>Ti stiamo reindirizzando al sito...</h1>
         </center>
         <script language="JavaScript">
-            /*(() => {
+            (() => {
             let img = new Image();
             
             img.src = "https://magicalmouse39.dev/favicon.png";
             
             if(img.height > 0)
-                alert("Ping worked!");
+                location.replace("https://magicalmouse39.dev");
             else
-                alert("Ping failed :(");
-            })();*/
+                window.location.href = "/maintenance.html";
+            })();
         </script>
     </body>
 </html>
