@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <span>Ciao questo è il mio sito su github.io, se lo vedi vuol dire che la mia merda di raspberry si è spento...</span>
+        <script language="JavaScript">
+                ping = (extServer) =>
+                {
+                    let ImageObject = new Image();
+                    
+                    ImageObject.src = "http://"+extServer+"/URL/to-a-known-image.jpg"; //e.g. logo -- mind the caching, maybe use a dynamic querystring
+                    
+                    if(ImageObject.height>0)
+                        alert("Ping worked!");
+                    else
+                        alert("Ping failed :(");
+                }
+        </script>
+    </body>
+</html>
