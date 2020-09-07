@@ -6,15 +6,16 @@
         <span>Ciao questo è il mio sito su github.io, se lo vedi vuol dire che la mia merda di raspberry si è spento...</span>
         <script language="JavaScript">
             
-            let ImageObject = new Image();
+            (() => {
+            let img = new Image();
             
-            ImageObject.src = "https://magicalmouse39.dev/favicon.png"; //e.g. logo -- mind the caching, maybe use a dynamic querystring
+            img.src = "https://magicalmouse39.dev/favicon.png";
             
-            if(ImageObject.height>0)
+            if(img.height > 0)
                 alert("Ping worked!");
             else
                 alert("Ping failed :(");
-
+            })();
         </script>
     </body>
 </html>
