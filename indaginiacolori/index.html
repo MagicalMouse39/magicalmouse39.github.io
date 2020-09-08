@@ -8,6 +8,26 @@
             <h1>Ti stiamo reindirizzando al sito...</h1>
         </center>
         <script language="JavaScript">
+
+            (() => {
+
+                let timer = setTimeout(() => { window.location.href = "./maintenance.html"; }, 5000);
+
+                let img = document.createElement("img");
+                img.onload = function() {
+                    clearTimeout(timer);
+                    location.replace("https://indaginiacolori.altervista.org");
+                }
+
+                img.onerror = function() {
+                    clearTimeout(timer);
+                    window.location.href = "./maintenance.html";
+                }
+
+                img.src = "http://indaginiacolori.altervista.org/favicon.ico";
+            })();
+
+            /*
             (() => {
             let img = new Image();
             
@@ -17,7 +37,7 @@
                 location.replace("https://indaginiacolori.altervista.org");
             else
                 window.location.href = "./maintenance.html";
-            })();
+            })();*/
         </script>
     </body>
 </html>
